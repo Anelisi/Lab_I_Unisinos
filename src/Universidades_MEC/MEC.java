@@ -51,6 +51,7 @@ public class MEC {
     }
 
     public void universidadesDoSul() {
+        System.out.println("==================== UNIVERSIDADES  DO SUL =======================\n");
         for (int i = 0; i < universidadesPublicas.length; i++) {
             if (universidadesPublicas[i].getEstado().equalsIgnoreCase("RS") || universidadesPublicas[i].getEstado().equalsIgnoreCase("rs")) {
 
@@ -75,11 +76,11 @@ public class MEC {
         System.out.printf("%29s", "LISTA DE UNIVERSIDADES\n");
 
         for (int i = 0; i < universidadesPublicas.length; i++) {
-            System.out.println("========== Públicas =============");
+            System.out.println("========== Pública =============");
             universidadesPublicas[i].imprimeInfo();
         }
         for (int j = 0; j < universidadesPrivadas.length; j++) {
-            System.out.println("========== Privadas =============");
+            System.out.println("========== Privada =============");
             universidadesPrivadas[j].imprimeInfo();
         }
     }

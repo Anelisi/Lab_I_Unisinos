@@ -1,7 +1,5 @@
 package Universidades_MEC;
 
-import Universidades_MEC.MEC;
-
 public class Principal {
     public static void main(String[] args) {
 
