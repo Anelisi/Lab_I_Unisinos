@@ -90,8 +90,15 @@ public class MEC {
         for (int i = 0; i < universidadesPrivadas.length; i++) {
             if (universidadesPrivadas[i].getValorMensalidade() > maior) {
                 maior = universidadesPrivadas[i].getValorMensalidade();
-            } else maior = maior;
-            if (universidadesPrivadas[i].getValorMensalidade() == maior){
+            }
+            for (int j = 0; j < universidadesPrivadas.length; j++) {
+                if (universidadesPrivadas[j].getValorMensalidade() > maior) {
+                    maior = universidadesPrivadas[j].getValorMensalidade();
+                }
+            }
+        }
+        for (int i = 0; i < universidadesPrivadas.length; i++) {
+            if (universidadesPrivadas[i].getValorMensalidade() == maior) {
                 System.out.println("------------------------------------------------");
                 System.out.println(" Universidade mais cara: ");
                 System.out.println("------------------------------------------------");
@@ -104,9 +111,9 @@ public class MEC {
         System.out.printf("%33s", " CADASTRO \n");
         System.out.printf("%29s", "DE\n");
         System.out.printf("%35s", "UNIVERSIDADES \n");
-                this.cadastrarUniversidadePublica();
+        this.cadastrarUniversidadePublica();
 
-                this.cadastrarUniversidadePrivada();
+        this.cadastrarUniversidadePrivada();
     }
 
     public void dadosUni() {
@@ -157,7 +164,7 @@ public class MEC {
 
             }
         } else {
-                if (universidadesPrivadas[0] == null && universidadesPublicas[0] == null) {
+            if (universidadesPrivadas[0] == null && universidadesPublicas[0] == null) {
                 System.out.println("------------------------------------------------");
                 System.out.println("\tNenhuma Universidade Cadastrada!");
                 System.out.println("------------------------------------------------");

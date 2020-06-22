@@ -14,7 +14,9 @@ public class Principal {
             System.out.println("-----------------------------------------------------");
             continua = Teclado.leString("Gostaria de acessar às informações das Univeridades? S/N\n");
             System.out.println("-----------------------------------------------------");
-            mec.dadosUni();
+            if (continua.equals("S") || continua.equals("s")) {
+                mec.dadosUni();
+            }
         } while (continua.equals("S") || continua.equals("s"));
     }
 }
