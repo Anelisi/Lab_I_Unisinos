@@ -1,12 +1,9 @@
 package Universidades_MEC;
 
 public class MEC {
-    int qPub;
+    int  j = 0, c = 0, i, qPub, qPri;
     Publica[] universidadesPublicas;
-    int qPri;
     Privada[] universidadesPrivadas;
-    int c = 0;
-    int j = 0;
 
     public void cadastrarUniversidadePublica() {
         System.out.println("\n==========================================================");
@@ -88,29 +85,25 @@ public class MEC {
 
     public void maisCara() {
         double maior = 0.0;
-        for (int i = 0; i < universidadesPrivadas.length; i++) {
+        for (i = 0; i < universidadesPrivadas.length; i++) {
             if (universidadesPrivadas[i].getValorMensalidade() > maior) {
                 maior = universidadesPrivadas[i].getValorMensalidade();
             }
-            for (int j = 0; j < universidadesPrivadas.length; j++) {
-                if (universidadesPrivadas[j].getValorMensalidade() > maior) {
-                    maior = universidadesPrivadas[j].getValorMensalidade();
+        }
+
+            for (int i = 0; i < universidadesPrivadas.length; i++) {
+                if (universidadesPrivadas[i].getValorMensalidade() == maior) {
+                    System.out.println("------------------------------------------------");
+                    System.out.println(" Universidade mais cara: ");
+                    System.out.println("------------------------------------------------");
+                    universidadesPrivadas[i].imprimeInfo();
                 }
             }
         }
-        for (int i = 0; i < universidadesPrivadas.length; i++) {
-            if (universidadesPrivadas[i].getValorMensalidade() == maior) {
-                System.out.println("------------------------------------------------");
-                System.out.println(" Universidade mais cara: ");
-                System.out.println("------------------------------------------------");
-                universidadesPrivadas[i].imprimeInfo();
-            }
-        }
-    }
 
     public void Universidades() {
         System.out.printf("%33s", " CADASTRO \n");
-        System.out.printf("%29s", "DE\n");
+        System.out.printf("%30s", "DE\n");
         System.out.printf("%35s", "UNIVERSIDADES \n");
         this.cadastrarUniversidadePublica();
 
